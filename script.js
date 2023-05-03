@@ -72,6 +72,7 @@ console.log('That thang should say Oh! Hi There!', findThatThang(thang, 2)) // l
 
 
 
+
 // 140 Loops, Arrays, and Concatenation Checkpoint
 // ### Example 1
 let employees = [ // declare array
@@ -97,4 +98,19 @@ console.log('Expected result for total years of experience should be 28:', workF
 
 
 
+// 150 Loops and Two Dimensional Arrays Checkpoint
+function addAllArrays (arrays){ // start function to sum all values within nested arrays
+    let sum = 0; // set default sum at zero
+    for (let i=0; i<arrays.length; i++){ // start first loop to cycle through the first level of arrays
+        for(let x=0; x<arrays[i].length; x++){ // another loop to access values inside the nested arrays
+            sum += arrays[i][x]; // equation to sum all values contained in all arrays within initial array
+        } // end second for loop
+    } // end first for loop
+    return sum // set result for function
+} // end addAllArrays function
 
+// Example 1
+console.log('The expected result here is 15:', addAllArrays([ [1, 2], [3, 4, 5] ])); // log to test
+
+// Example 2
+console.log('The expected result here is 21:', addAllArrays([ [1, 2], [3, 4, 5], [6] ])); // log to test
