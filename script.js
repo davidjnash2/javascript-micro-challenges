@@ -72,4 +72,29 @@ console.log('That thang should say Oh! Hi There!', findThatThang(thang, 2)) // l
 
 
 
+// 140 Loops, Arrays, and Concatenation Checkpoint
+// ### Example 1
+let employees = [ // declare array
+    { name: "Tony", yearsOfExperience: 10 }, // add object to array
+    { name: "Carla", yearsOfExperience: 4 }]; // add object to array
+
+function workForce( anArray ){ // start function with array as parameter
+    let sum = 0; // set default result to 0
+    for (let employee of anArray){ // start conditional loop for each object in array
+        sum += employee.yearsOfExperience; // add all object values for yearsOfExperience 
+    } // end loop
+    return sum; // function result
+} // end workForce function
+
+console.log('Expected result for total years of experience should be 14:', workForce(employees)); // log to test
+
+
+// ### Example 2
+employees.push({ name: "Kris", yearsOfExperience: 14 });// push new object to employees array
+console.log('Expected result for total years of experience should be 28:', workForce(employees)); // log to test
+
+
+
+
+
 
